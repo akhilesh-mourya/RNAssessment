@@ -16,7 +16,7 @@ import {usePostList} from '../../hooks/usePostList';
 
 const PostListScreen = () => {
   const {
-    postList,
+    updatedPostList,
     postId,
     bottomSheetRef,
     snapPoints,
@@ -31,7 +31,7 @@ const PostListScreen = () => {
   const renderPostList = () => {
     return (
       <FlatList
-        data={postList}
+        data={updatedPostList}
         renderItem={renderPostItem}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item: PostDataProps, index: number) =>

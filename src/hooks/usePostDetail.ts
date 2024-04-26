@@ -10,6 +10,7 @@ export const usePostDetail = (id: number) => {
     callPostDetailAPI(id);
   }, [id]);
 
+  /** This function is used to call API for getting post detail for the corresponding id */
   const callPostDetailAPI = async (postId: number) => {
     try {
       const data = await getPostDetails(postId);
